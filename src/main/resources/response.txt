@@ -1,0 +1,73 @@
+Hit this url :-- localhost:9090/books
+
+{
+    getAllBooks{
+        isbn
+        authors
+        publisher
+        bookTitle
+        publishedDate
+    }
+    getBook(isbn : "125"){
+        isbn
+        authors
+        publisher
+        bookTitle
+        publishedDate
+    }
+}
+
+with this body as plain text.
+
+below will be the response
+
+{
+    "data": {
+        "getAllBooks": [
+            {
+                "isbn": "123",
+                "authors": [
+                    "Hemang"
+                ],
+                "publisher": "ShivDhara",
+                "bookTitle": "Java8",
+                "publishedDate": "Sat Nov 28 18:26:32 IST 2020"
+            },
+            {
+                "isbn": "124",
+                "authors": [
+                    "Hemang",
+                    "Nikunj"
+                ],
+                "publisher": "Forever Creative Soft",
+                "bookTitle": "Programming",
+                "publishedDate": "Sat Nov 28 18:26:32 IST 2020"
+            },
+            {
+                "isbn": "125",
+                "authors": [
+                    "Tushar",
+                    "Nikunj",
+                    "Hemang"
+                ],
+                "publisher": "Ahmedabad",
+                "bookTitle": "Machine Learning",
+                "publishedDate": "Sat Nov 28 18:26:32 IST 2020"
+            }
+        ],
+        "getBook": {
+            "isbn": "125",
+            "authors": [
+                "Tushar",
+                "Nikunj",
+                "Hemang"
+            ],
+            "publisher": "Ahmedabad",
+            "bookTitle": "Machine Learning",
+            "publishedDate": "Sat Nov 28 18:26:32 IST 2020"
+        }
+    },
+    "errors": [],
+    "dataPresent": true,
+    "extensions": null
+}
